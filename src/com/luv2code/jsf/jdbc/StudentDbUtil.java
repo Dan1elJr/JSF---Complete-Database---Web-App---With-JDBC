@@ -18,13 +18,7 @@ public class StudentDbUtil {
 	private DataSource dataSource;
 	private String jndiName = "java:comp/env/jdbc/student_tracker";
 	
-	public static StudentDbUtil getInstance() throws Exception {
-		if (instance == null) {
-			instance = new StudentDbUtil();
-		}
-		
-		return instance;
-	}
+	
 	
 	private StudentDbUtil() throws Exception {		
 		dataSource = getDataSource();
@@ -36,6 +30,14 @@ public class StudentDbUtil {
 		DataSource theDataSource = (DataSource) context.lookup(jndiName);
 		
 		return theDataSource;
+	}
+	
+	public static StudentDbUtil getInstance() throws Exception {
+		if (instance == null) {
+			instance = new StudentDbUtil();
+		}
+		
+		return instance;
 	}
 		
 	public List<Student> getStudents() throws Exception {
