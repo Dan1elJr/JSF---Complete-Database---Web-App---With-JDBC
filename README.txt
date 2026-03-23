@@ -1,6 +1,6 @@
 # Student Tracker App 📚
 
-Aplicação simples em **JavaServer Faces (JSF)** para cadastro e gerenciamento de estudantes.
+Aplicação em **JavaServer Faces (JSF)** para cadastro e gerenciamento de estudantes.
 
 ## ✨ Funcionalidades
 
